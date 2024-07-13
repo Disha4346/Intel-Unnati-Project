@@ -1,12 +1,87 @@
-#Main Dashboard
+# GPS-Based-Toll-System
+
+## Project Overview
+
+This project simulates a GPS-based toll system, integrating vehicle tracking, toll calculation, and visualization features. It uses user authentication with 2-factor authentication (2FA) to ensure secure access. Key functionalities include simulating vehicle movement, calculating tolls based on entry and exit points, and displaying user travel data in an interactive dashboard.
+
+## Features
+
+1. User Authentication and 2FA:
+   - Secure login with user ID and phone number.
+   - 2FA using Google Authenticator.
+
+2. Vehicle Tracking and Toll Calculation:
+   - Converts entry and exit points into geographical coordinates.
+   - Calculates toll zones between entry and exit points.
+   - Computes total toll tax based on the distance traveled within toll zones.
+
+3. Simulation and Visualization:
+   - Simulates vehicle movement on a map using Folium.
+   - Visualizes entry and exit points along with toll zones.
+   - Displays user travel data with interactive dashboards using Seaborn and Matplotlib.
+
+## Technology Stack
+
+- Frontend: Streamlit
+- Backend: Python
+- Database: Custom module for user and travel data
+- Geospatial Libraries: Geopy
+- Visualization Libraries: Folium, Matplotlib, Seaborn
+
+## Installation and Setup
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Streamlit, Pandas, Folium, Streamlit-Folium, Matplotlib, Seaborn, PyOTP, Geopy
+
+### Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/gps-based-toll-system.git
+   cd gps-based-toll-system #can be skipped
+   ```
+
+2. **Install the required packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the application**:
+   ```bash
+   streamlit run Welcome.py
+   ```
+
+## Usage
+
+1. **Login**: Enter your user ID and phone number, then verify with the 2FA code from Google Authenticator.
+2. **Dashboard**: View your travel data visualized in interactive plots.
+3. **Simulate Vehicle Movement**: Input entry and exit points to calculate toll zones and simulate vehicle movement on a map.
+
+## Contributions
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss changes or improvements.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### Special Thanks
+
+Special thanks to:
+- **Dr. Ankur Rai** (GLA University, Mathura) for mentorship and guidance.
+
+
+**Some more info about pages**
+
+
+# Main Dashboard
 It is the page that actually does the work of that is alloted to us in our project.
 
 The page pages\5_🧳_travel_viz.py allows the user to interactively filter the data based on time periods. The heatmaps for the locations can also be plotted. Along with the heatmaps, there is an option to show histograms for the data points by different time periods like hour, months & years. Additionally, a specified number of random images can be obtained from Unsplash images of the locations in the dataset.
-
-*Installation
-Install the dependencies
-
-#pip install -r requirements.txt
 
 Instructions for Running
 Get the Google Maps location history from Google Takeout.
