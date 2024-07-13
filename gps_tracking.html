@@ -1,0 +1,53 @@
+<!--This html file's purpose is to show the live location of the vehicle on the map.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time GPS Tracking</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        let map = L.map('map').setView([26.769464, 81.095838], 12);
+        let marker = L.marker([26.769464, 81.095838]).addTo(map);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        function fetchCoordinates() {
+            fetch('/coordinates')
+                .then(response => {
+                    if (!response.ok) {
+                        console.log("-----------------error----------------");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Received coordinates:', data);
+                    const latLng = [data.latitude, data.longitude];
+                    marker.setLatLng(latLng); 
+                    if (!map.getCenter().equals(latLng)) {
+                        map.setView(latLng);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching coordinates:', error);
+                });
+
+            setTimeout(fetchCoordinates, 1000);
+        }
+
+        fetchCoordinates();
+
+    </script>
+</body>
+</html>
