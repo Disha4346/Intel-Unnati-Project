@@ -95,9 +95,4 @@ The API key & secret are stored in a .env file. Create a copy of .env.example & 
 To use Mapbox for the streamlit maps, please configure the settings following the documentation on Streamlit.(if needed.)
 
 
-#The sample is pre-generated for the ease of work of the app. 
-
-Application will run by running
-```
-streamlit run Welcome.py
-```
+#The sample is pre-generated for the ease of work of the page.
