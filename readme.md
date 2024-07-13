@@ -81,7 +81,8 @@ Special thanks to:
 # Main Dashboard
 It is the page that actually does the work of that is alloted to us in our project.
 
-The page pages\5_🧳_travel_viz.py allows the user to interactively filter the data based on time periods. The heatmaps for the locations can also be plotted. Along with the heatmaps, there is an option to show histograms for the data points by different time periods like hour, months & years. Additionally, a specified number of random images can be obtained from Unsplash images of the locations in the dataset.
+# 🧳_travel_viz.py 
+- this page allows the user to interactively filter the data based on time periods. The heatmaps for the locations can also be plotted. Along with the heatmaps, there is an option to show histograms for the data points by different time periods like hour, months & years. Additionally, a specified number of random images can be obtained from Unsplash images of the locations in the dataset.
 
 Instructions for Running
 Get the Google Maps location history from Google Takeout.
@@ -96,3 +97,8 @@ To use Mapbox for the streamlit maps, please configure the settings following th
 
 
 #The sample is pre-generated for the ease of work of the page.
+
+# admin.py
+This page can be accessed only when the admin enter, here, since i have created this, 
+Details are: admin_streamlit1
+Password: Stream_lits
