@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 import database as db
 
-st.set_page_config(page_title='GPS Based Simulation', layout='wide', page_icon="Logos\gps.png")
+st.set_page_config(page_title='GPS Based Simulation', layout='wide', page_icon=r"Logos\gps.png")
 st.sidebar.title("GPS Based Simulation")
-st.image("Logos\Main-logo.png", use_column_width=False)
+st.image(r"Logos\Main-logo.png", use_column_width=False)
 
 with st.sidebar.container():
-    st.image('Logos\gps-logo.jpeg', use_column_width=True, caption='GPS Based Project')
+    st.image(r'Logos\gps-logo.jpeg', use_column_width=True, caption='GPS Based Project')
 st.sidebar.markdown("---")
 
 def print_praise():
@@ -47,7 +47,7 @@ def display_admin_page():
     unpaid_tolls = toll_data[toll_data['toll_paid'] == 0]
     st.write(f"Total unpaid tolls: {len(unpaid_tolls)}")
     st.dataframe(unpaid_tolls)
-    st.image('https://vajiramandravi.s3.us-east-1.amazonaws.com/media/2020/9/5/10/56/46/road.jpg')
+    st.image(r'https://vajiramandravi.s3.us-east-1.amazonaws.com/media/2020/9/5/10/56/46/road.jpg')
 
 def admin_login():
     st.title("Admin Login")
