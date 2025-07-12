@@ -12,7 +12,6 @@ st.set_page_config(
 )
 
 st.sidebar.title("GPS Based Simulation")
-st.image("Logos/Main-logo.png", use_column_width=False)
 
 with st.sidebar.container():
     st.image('Logos/gps-logo.jpeg', use_column_width=True, caption='GPS Based Project')
