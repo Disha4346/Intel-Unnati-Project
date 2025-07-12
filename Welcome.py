@@ -9,16 +9,14 @@ import sqlite3
 def edit():
     st.set_page_config(page_title='GPS Based Simulation',
                        layout='wide',
-                       page_icon="Logos\gps.png")
+                       page_icon=r"Logos\gps.png")
     st.sidebar.title("GPS Based Simulation")
-    st.snow()
-    st.balloons()
-    st.image("Logos\Main-logo.png", use_column_width=True)
+    st.image(r"Logos\Main-logo.png", use_column_width=True)
     
     # Page Setup 
     # Image In Sidebar 
     with st.sidebar.container(): 
-        st.image('Logos\gps-logo.jpeg', use_column_width=True, caption='GPS Based Project')
+        st.image(r"Logos\gps-logo.jpeg", use_column_width=True, caption='GPS Based Project')
     st.sidebar.markdown("---")
     
     def print_praise():
@@ -30,10 +28,15 @@ def edit():
     
     st.sidebar.success(print_praise())   
     st.sidebar.write("---\n")
-    st.sidebar.info("Special Thanks to my Internal Mentor\n\nDr.Ankur Rai Sir,\n\nGLA UNIVERSITY, MATHURA")
-edit()
-connect_db()
-create_user_table()
-create_user_data()
-create_toll_data()
-create_safe()
+def initialize_database():
+    try:
+        connect_db()
+        create_user_table()
+        create_user_data()
+        create_toll_data()
+        create_safe()
+    except Exception as e:
+        st.error(f"Database setup failed: {e}")
+
+initialize_database()
+
