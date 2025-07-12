@@ -4,9 +4,10 @@ pandas==2.1.4
 pyotp==2.8.0
 qrcode==7.4.2
 streamlit-option-menu==0.3.2
-pyotp==2.8.0
 geopandas==0.14.0
 shapely==2.0.1
+fiona==1.9.5
+pyproj==3.6.1
 folium==0.14.0
 streamlit-folium>=0.8.0
 python-dotenv>=1.0.0
