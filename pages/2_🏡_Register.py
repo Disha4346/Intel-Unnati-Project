@@ -9,7 +9,6 @@ st.set_page_config(page_title='GPS Based Simulation',
                    layout='wide',
                    page_icon=r"Logos/gps.png")
 st.sidebar.title("GPS Based Simulation")
-st.image(r"Logos/Main-logo.png", use_column_width=False)
 # Page Setup 
 #Image In Sidebar 
 with st.sidebar.container(): 
