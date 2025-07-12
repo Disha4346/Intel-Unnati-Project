@@ -5,11 +5,11 @@ from database import *
 import folium
 from streamlit_folium import folium_static
 import sqlite3
-st.image(r"Logos/Main-logo.png", use_column_width=False)
 def edit():
     st.set_page_config(page_title='GPS Based Simulation',
                        layout='wide',
                        page_icon=r"Logos/gps.png")
+    st.image(r"Logos/Main-logo.png", use_column_width=False)
     st.sidebar.title("GPS Based Simulation")
     
     # Page Setup 
@@ -36,6 +36,6 @@ def initialize_database():
         create_safe()
     except Exception as e:
         st.error(f"Database setup failed: {e}")
-
+edit()
 initialize_database()
 
