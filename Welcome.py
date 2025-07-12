@@ -5,7 +5,7 @@ from database import *
 import folium
 from streamlit_folium import folium_static
 import sqlite3
-st.image(r"Logos/Main-logo.png", use_column_width=True)
+st.image(r"Logos/Main-logo.png", use_column_width=False)
 def edit():
     st.set_page_config(page_title='GPS Based Simulation',
                        layout='wide',
