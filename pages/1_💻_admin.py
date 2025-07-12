@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 import database as db
 
-st.set_page_config(page_title='GPS Based Simulation', layout='wide', page_icon=r"Logos\gps.png")
+st.set_page_config(page_title='GPS Based Simulation', layout='wide', page_icon=r"Logos/gps.png")
 st.sidebar.title("GPS Based Simulation")
-st.image(r"Logos\Main-logo.png", use_column_width=False)
+st.image(r"Logos/Main-logo.png", use_column_width=False)
 
 with st.sidebar.container():
-    st.image(r'Logos\gps-logo.jpeg', use_column_width=True, caption='GPS Based Project')
+    st.image(r'Logos/gps-logo.jpeg', use_column_width=True, caption='GPS Based Project')
 st.sidebar.markdown("---")
 
 def print_praise():
