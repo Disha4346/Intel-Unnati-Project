@@ -9,7 +9,6 @@ from time import sleep
 st.set_page_config(
     page_title='GPS Based Simulation',
     layout='wide',
-    page_icon="Logos/gps.png"
 )
 
 st.sidebar.title("GPS Based Simulation")
